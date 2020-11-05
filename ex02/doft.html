@@ -2,64 +2,45 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>KEKE</title>
-		<style> 
-			.box {
-				border: 1px solid;
-				/* padding: 10px; */
-				box-shadow: 10px 10px 5px;
-				border-radius: 8px;
-				border:none;
-				background-color:#938c8c;
-				max-width: fit-content;
-			}
-			.img {
-				vertical-align: middle;
-				max-width: 30%;
-  				height: auto;
-			}
-			.left {
-				display: block;
-				margin-left: 280px;
-				margin-right: auto;
-				/* width: 50%; */
-			}
-			.center {
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				/* width: 50%; */
-			}
-			.right {
-				display: block;
-				margin-left: auto;
-				margin-right: 280px;
-				/* width: 50%; */
-			}
-		</style>
-	<link rel="stylesheet" href="doft.css" type="text/css">
+		<title>Day of the 42</title>
+		<link rel="stylesheet" href="doft.css" type="text/css">
 	</head>
 	<body>
-		<div class="box center">
-			<img src="resources/day_of_the_42.png"></img>
-			<img src="resources/loupe.png"></img>
-			<img src="resources/reload.png"></img>
-			<img src="resources/close.gif"></img>
-		</div>
-		<div class="box left">
-			<img src="resources/arrow.png"></img><br>
-			<img src="resources/main.png"></img><br>
-			<img src="resources/oeil.png"></img><br>
-			<img src="resources/outil.png"></img><br>
-			<img src="resources/chat-icon.png"></img>
-		</div>
-		<div class="box center">
-			<img src="resources/cluster.jpg"></img>
-		</div>
-		<div class="box right">
-			<img src="resources/book.png"></img><br>
-			<img src="resources/towel.png"></img><br>
-			<img src="resources/brick.jpg"></img>
+		<div class="page">
+			<header>
+				<img class="logo" src="resources/day_of_the_42.png" alt="logo" title="logo">
+				<img class="search" src="resources/loupe.png" alt="search" title="search">
+				<a href="http://www.disney.com"><img class="reload" src="resources/reload.png" alt="Start from the beginning" title="Start from the beginning"></a>
+				<a href="http://www.relaischateaux.com"><img class="close" src="resources/close.gif" alt="Disconnect" title="Disconnect"></a>
+			</header>
+			<div class="menu">
+				<img src="resources/arrow.png" alt="Advance" title="Advance">
+				<img src="resources/main.png" alt="Take" title="Take">
+				<img class="selected" src="resources/oeil.png" alt="Look" title="Look">
+				<img src="resources/outil.png" alt="Use" title="Use">
+				<img src="resources/chat-icon.png" alt="Speak" title="Speak">
+			</div>
+			<div class="content">
+				<img src="resources/cluster.jpg" alt="Cluster" title="Cluster" usemap="#map">
+				<map name="map" id="map">
+					<area shape="rect" coords="312,312,465,465" alt="Ikea.com" title="Ikea.com" href="https://www.ikea.com/">
+					<area shape="rect" coords="777,302,992,470" alt="Apple.com" title="Apple.com" href="https://www.apple.com/">
+				</map>
+				<div class="form">
+					Vous <span class="big">entrez</span> alors dans une grande piece remplie<br>
+					d'<span class="shadow">ordinateurs</span>...<br>
+					<span class="italic">- Bonjour, vous êtes nouveau ici ?</span>
+					<form action="#">
+						<input type="text" size="53" id="answer" name="name">
+						<input type="submit" value="Reply">
+					</form>
+				</div>
+			</div>
+			<div class="menu2">
+				<img class="book" src="resources/book.png" alt="Book" title="Book">
+				<img class="towel" src="resources/towel.png" alt="Towel" title="Towel">
+				<div class="brick" alt="brick" title="brick"></div>
+			</div>
 		</div>
 	</body>
 </html>

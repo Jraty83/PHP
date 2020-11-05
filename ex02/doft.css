@@ -1,13 +1,147 @@
 body {
-	background-color: rgb(85, 85, 85);
-  }
-  
-  h1 {
-	color: white;
-	text-align: center;
-  }
-  
-  p {
-	font-family: verdana;
-	font-size: 20px;
-  }
+	background-color: #505050;
+	margin: 18px 0 0 8px;
+}
+
+.page {
+	margin: 0 auto;
+	width: 1420px;
+}
+
+header {
+	width: 1420px;
+	height: 150px;
+	position: relative;
+}
+
+.menu{
+	width: 108px;
+	height: 410px;
+	float: left;
+	margin: 20px 0 0 30px;
+	padding: 15px 0 0 32px;
+}
+
+.menu img {
+	width: 70px;
+	margin-bottom: 6px;
+}
+
+.selected {
+	border: 5px solid;
+	border-color: red;
+	border-radius: 5px;
+	margin: -5px 0 0 0;
+}
+
+.menu2 {
+	width: 108px;
+	height: 410px;
+	float: right;
+	margin: 20px 30px 0 10px;
+	padding: 15px 0 0 32px;
+}
+
+.menu2 img {
+	width: 70px;
+	margin-bottom: 6px;
+}
+
+header, .menu, .menu2, .content {
+	box-shadow: 10px 10px 10px;
+	border-radius: 8px;
+	border:none;
+	background-color:#909090;
+}
+
+.content {
+	margin: 20px 0 0 30px;
+	width: 1020px;
+	height: 582px;
+	float: left;
+	position: relative;
+}
+
+.content img {
+	margin: 10px;
+	width: 1000px;
+	height: 562px;
+}
+
+.logo {
+	width: 430px;
+	height: auto;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+
+.search {
+	position: absolute;
+	margin: 25px 150px 150px 690px;
+}
+
+.reload {
+	width: 20px;
+	height: 20px;
+	float: right;
+	vertical-align: top;
+	margin: 10px 10px 25px 0;
+}
+
+.close {
+	width: 20px;
+	height: 20px;
+	float: right;
+	vertical-align: bottom;
+	margin: 120px -20px 0 0;
+}
+
+.book {
+	width: 65px;
+	margin: 5px 0 0 10px;
+}
+
+.towel {
+	width: 60px;
+	margin: 5px 0 0 10px;
+}
+
+.brick {
+	background-image: url('resources/brick.jpg');
+	width: 120px;
+	height: 70px;
+	margin: 5px 0 0 -22px;
+}
+
+.form {
+	background-color: #88ff89;
+	width: 500px;
+	height: 150px;
+	position: absolute;
+	bottom: -85px;
+	left: -255px;
+	padding: 10px;
+	font-size: 16px;
+	font-family: arial;
+	letter-spacing: 1px;
+	box-shadow: 10px 10px 10px;
+	border-radius: 8px;
+	border:none;
+}
+
+.form span.big {
+	font-size: 35px;
+	font-family: Times;
+}
+
+.form span.shadow {
+	text-shadow: 5px 5px 4px rgb(162, 22, 22), 10px 10px 25px rgb(172, 164, 164);
+}
+
+.form span.italic {
+	font-style: italic;
+}
+
+/* .form form {
+	height: 22px;
+} */
