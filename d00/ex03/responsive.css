@@ -1,0 +1,84 @@
+table {
+	text-align: center;
+	vertical-align: middle;
+	font-family: Arial;
+	margin: auto;
+	border: 0.3vmin solid #FFFFFF;
+	border-collapse: collapse;
+}
+
+td {
+	font-size: 1vmin;
+	font-weight: bold;
+	width: 5.5vmin;
+	height: 0.6vmin;
+	border: 0.3vmin solid #FFFFFF;
+	border-collapse: collapse;
+}
+th {
+	font-size: 1.5vmin;
+	width: 5.5vmin;
+	border-collapse: collapse;
+}
+
+.asterix {
+	transform: rotate(90deg);
+	font-size: 2vmin;
+	font-weight: normal;
+	width: 1%;
+}
+.alkalimetal {
+	background-color: #ff9d9d;
+}
+.earthmetal {
+	background-color: #ffdead;
+}
+.lanthanide {
+	background-color: #ffbfff;
+}
+.actinide {
+	background-color: #ff99cc;
+}
+.transition {
+	background-color: #ffc0c0;
+}
+.posttransition {
+	background-color: #cccccc;
+}
+.metalloid {
+	background-color: #cccc99;
+}
+.reactive {
+	background-color: #f0ff8f;
+}
+.noblegas {
+	background-color: #c0ffff;
+}
+.unknown {
+	background-color: #e8e8e8;
+}
+.num {
+	float: left;
+	text-align: bottom;
+	font-weight: normal;
+	font-size: 1vmin;
+	margin: 0;
+}
+.m {
+	float: right;
+	text-align: bottom;
+	font-weight: normal;
+	font-size: 1vmin;
+	margin: 0;
+}
+.empty {
+	transform: rotate(90deg);
+	font-size: 2vmin;
+	font-weight: normal;
+	width: 0.2vmin;
+	color: white;
+}
+.symbol {
+	font-size: 2vmin;
+	margin: 2.2vmin 0 -0.2vmin 0;
+}
