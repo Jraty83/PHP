@@ -9,8 +9,11 @@ if ($argc > 1)
 		foreach($str as $value2)
 			$arr[] = $value2;
 	}
-	sort($arr);
-	foreach ($arr as $output)
-		echo "$output\n";
+	if ($arr[0] != "")
+	{
+		sort($arr);
+		foreach ($arr as $output)
+			echo "$output\n";
+	}
 }
 ?>
