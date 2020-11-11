@@ -31,7 +31,7 @@ if ($argc == 2)
 			$arr[2] = 7;
 		if ($arr[2] == août || $arr[2] == Août)
 			$arr[2] = 8;
-		if ($arr[2] == septembre|| $arr[2] == Septembre)
+		if ($arr[2] == septembre || $arr[2] == Septembre)
 			$arr[2] = 9;
 		if ($arr[2] == octobre || $arr[2] == Octobre)
 			$arr[2] = 10;
