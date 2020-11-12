@@ -25,6 +25,88 @@ PHP SHELL SCRIPT SKELETON:
 
 • newline can be added like this: echo "Hello World" . PHP_EOL;
 
+• variable inside a variable:
+	#!/usr/bin/php
+	<?php
+	$name = "key";
+	$$name = "val"; // (string "key" becomes a variable for "val")
+	echo "$key\n";
+	?>
+
+	~/_PHP_piscine/Day02/ex00 % ./another_world.php
+	val // (now key is val)
+
+• Regular expressions (Regex or PCRE): *
+	• preg_match("/pattern/", "subject")
+			- returns 1 if pattern is found, otherwise 0
+			- preg_match("/^t[oi]to$/", "lklslkdstotoaksddlkjas")
+				• ^ = pattern must be found in the beginning of the line
+				• $ = pattern must be found in the end of the line
+				• [] = "OR" aka multiple patters (o or i)
+				• [0-9] = "BETWEEN" (from 0 to 9)
+				• [a-d]+ = "ONE OR MORE" (unlimited amount)
+				• *t = "ZERO OR MORE" (character before "t")
+				• ?t = "ZERO OR ONCE" (character before "t")
+				• t[0-9]{4} = "EXACT AMOUNT" (four numbers after "t", no more no less)
+				• t[^0-9]{4} = "ANYTHING BUT" (any four NON-numbers after "t", no more no less)
+			//	• t([io])t\1 = "SAME AS FIRST" ("\1" search the same thing found inside the first parenthesis)
+
+				• "/i" = "CASE INSENSITIVITY" (the "i" makes pattern search case insensitive)
+				• "/m" = "MULTILINE" (the "\m" makes it search several lines)
+					By default, PCRE treats the subject string as consisting of a single "line" of characters (even if it actually contains several newlines).
+				• "/s" = "MULTILINE" (the "\m" makes it search several lines)
+
+	• preg_match_all
+			- returns number of found patterns in the string
+
+• ===
+	if (0 == "World") returns 1 because first comes number and it interprets the second as a number as well (characters are number 0)
+	if (0 === "World") returns 0 because of an additional type check (number != character)
+	
+	$my_tab = array("zero", "one", "two");
+	if (array_search("zero", $my_tab) !== FALSE)
+		-> return the "key" on zero [0] which is 0 so without !== would be false
+			 - key "0" (number 0) is not the same as boolean 0 (false)
+
+##############################################################################
+
+SIMPLE REGEX:
+
+Regex quick reference
+[abc]		A single character: a, b or c
+[^abc]		Any single character but a, b, or c
+[a-z]		Any single character in the range a-z
+[a-zA-Z]	Any single character in the range a-z or A-Z
+^		Start of line
+$		End of line
+\A		Start of string
+\z		End of string
+.		Any single character
+\s		Any whitespace character
+\S		Any non-whitespace character
+\d		Any digit
+\D		Any non-digit
+\w		Any word character (letter, number, underscore)
+\W		Any non-word character
+\b		Any word boundary character
+(...)	Capture everything enclosed
+(a|b)	a or b
+a?		Zero or one of a
+a*		Zero or more of a
+a+		One or more of a
+a{3}	Exactly 3 of a
+a{3,}	3 or more of a
+a{3,6}	Between 3 and 6 of a
+
+options: i case insensitive m make dot match newlines x ignore whitespace in regex o perform #{...} substitutions only once
+
+##############################################################################
+
+COOKIE EXAMPLE:
+
+DOMAIN		INCL.SUBDOMAINS		PATH	HTTPS ONLY		EXP.SINCE EPOCH		NAME	VALUE
+localhost	FALSE				/		FALSE			1607774463			food	choucroute
+
 ##############################################################################
 
 USEFUL COMMANDS:
