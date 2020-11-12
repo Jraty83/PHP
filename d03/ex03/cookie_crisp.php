@@ -8,5 +8,5 @@ if ($_GET["action"] == "get")
 		echo $_COOKIE[$_GET["name"]] . "\n";
 }
 if ($_GET["action"] == "del")
-	setcookie($_GET["name"], $_GET["value"], NULL, -1, '/');
+	setcookie($_GET["name"], NULL, -1, '/');
 ?>
