@@ -1,31 +1,27 @@
 <?php
-//	if (isset($_POST['submit'])) {		is good, but doesn't specify the value as "OK"...
-if ($_POST['login'] == "" || $_POST['passwd'] == "" || $_POST['submit'] != "OK")
-	echo "ERROR\n";
-else
-{
-	$serialized = array();
-	$username = $_POST['login'];
-	$password = $_POST['passwd'];
-	$dir = '../private';
-	$file = '../private/passwd';
-
-	if (!file_exists($file))	// if ../private/passwd FILE doesn't exist
+	if ($_POST['login'] && $_POST['passwd'] && $_POST['submit'] == "OK")
 	{
-		if (!file_exists($dir))			// if ../private DIR doesn't exist
-			mkdir('../private', 0777, true);	// create the directory
-		$serialized = serialize($file);
-		file_put_contents($file, $serialized, FILE_APPEND);
-		
-		hash('whirlpool', $password);
+		$dir = '../private';
+		$file = '../private/passwd';
+		if (!file_exists($dir))
+			mkdir($dir);
+		if (!file_exists($file))
+			file_put_contents($file, null);
+		$usr_data = unserialize(file_get_contents($file));
+		foreach ($usr_data as $key => $user)
+		{
+			if ($user['login'] === $_POST['login'])
+			{
+				echo "ERROR\n";
+				return ;
+			}
+		}
+		$tmp['login'] = $_POST['login'];
+		$tmp['passwd'] = hash('whirlpool', $_POST['passwd']);
+		$usr_data[] = $tmp;
+		file_put_contents($file, serialize($usr_data));
+		echo "OK\n";
 	}
-	else						// if ../private/passwd file ALREADY exists!
-	{
-		$usr_data = file_get_contents($file, true);
-
-//		foreach ($serialized as $pw)
-	
-	}
-	echo "OK\n";
-}
+	else
+		echo "ERROR\n";
 ?>
