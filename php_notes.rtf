@@ -109,6 +109,39 @@ localhost	FALSE				/		FALSE			1607774463			food	choucroute
 
 ##############################################################################
 
+MySQL:
+
+Install:
+	• brew install mysql
+	• brew services start mysql
+
+Connect:
+	• mysql -uroot
+ 
+Commands end with semicolon (;)
+Exit:	Ctrl+D
+Help:	mysql> \h
+
+Execute a file containing SQL queries:
+	mysql> source /Users/janne/Github/php_piscine/d05/ex00/ex00.sql;
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _
+
+We've installed your MySQL database without a root password. To secure it run:
+	mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+	mysql -uroot
+
+To have launchd start mysql now and restart at login:
+	brew services start mysql
+Or, if you don't want/need a background service you can just run:
+	mysql.server start
+
+##############################################################################
+
 USEFUL COMMANDS:
 
 ⌘+K V:	open live preview inside VSC
