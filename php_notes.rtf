@@ -1,6 +1,8 @@
-##############################################################################
+#############################################################################################################################################
 
-HTML SKELETON:
+HTML 
+
+SKELETON:
 
 <!DOCTYPE html>
 <html>
@@ -14,9 +16,11 @@ HTML SKELETON:
 	</body>
 </html>
 
-##############################################################################
+#############################################################################################################################################
 
-PHP SHELL SCRIPT SKELETON:
+PHP:
+
+SKELETON:
 
 #!/usr/bin/php
 <?php 
@@ -68,7 +72,45 @@ PHP SHELL SCRIPT SKELETON:
 		-> return the "key" on zero [0] which is 0 so without !== would be false
 			 - key "0" (number 0) is not the same as boolean 0 (false)
 
-##############################################################################
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+• EXTEND a class 	=> make a CHILD (which inherits all it's parent's attributes and methods)
+
+• IMPLEMENT a class	=> make a specific INTERFACE for a class (interface = "header file" which holds the functions' prototypes - all have to be used)
+
+		"Implement:"
+
+		Interfaces are abstract classes, so you can only declare things. A class implements an interface. You can implement multiple interfaces.
+
+		"Extend:"
+
+		You extend classes when you want a more specific version of a class.
+
+		"Example:"
+
+		// Contract: a pet should play
+		public interface Pet {
+			public void play(); 
+		}
+
+		// An animal eats and sleeps
+		class Animal {
+			public void eat();
+			public void sleep();
+		}
+
+
+		public class Camel extends Animal {
+
+		}
+
+		public class Dog extends Animal implements Pet {    
+			public void play() {...}
+		}
+		=> Both Camel and Dog are animals, so they extend Animal class. But only the Dog is a specific kind of Animal that also can be a Pet
+
+
+#############################################################################################################################################
 
 SIMPLE REGEX:
 
@@ -100,14 +142,14 @@ a{3,6}	Between 3 and 6 of a
 
 options: i case insensitive m make dot match newlines x ignore whitespace in regex o perform #{...} substitutions only once
 
-##############################################################################
+#############################################################################################################################################
 
 COOKIE EXAMPLE:
 
 DOMAIN		INCL.SUBDOMAINS		PATH	HTTPS ONLY		EXP.SINCE EPOCH		NAME	VALUE
 localhost	FALSE				/		FALSE			1607774463			food	choucroute
 
-##############################################################################
+#############################################################################################################################################
 
 MySQL:
 
@@ -134,7 +176,7 @@ Execute a file containing SQL queries:
 • show tables;
 • show columns from ft_table;
 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 We've installed your MySQL database without a root password. To secure it run:
 	mysql_secure_installation
@@ -149,7 +191,7 @@ To have launchd start mysql now and restart at login:
 Or, if you don't want/need a background service you can just run:
 	mysql.server start
 
-##############################################################################
+#############################################################################################################################################
 
 USEFUL COMMANDS:
 
@@ -161,3 +203,5 @@ USEFUL COMMANDS:
 ⌘+K+U:	uncomment a line
 
 ⇧+⌘+X:	extensions
+
+#############################################################################################################################################
