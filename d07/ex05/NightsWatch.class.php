@@ -1,22 +1,16 @@
 <?php
 
-class NightsWatch {
-
+Class NightsWatch
+{
+	public $fighters = array();
 	public function recruit($value) {
-		if (get_class($value) == "JonSnow") {
-			$print = new JonSnow();
-			$print->fight();
-		}
-		if (get_class($value) == "MaesterAemon")
-			return ;
-		if (get_class($value) == "SamwellTarly") {
-			$print = new SamwellTarly();
-			$print->fight();
-		}
+		if ($value instanceof IFighter)
+			$this->fighters[] = $value;
 	}
 
 	public function fight() {
-		return ;
+		foreach ($this->fighters as $letsgo)
+			$letsgo->fight();
 	}
 }
 ?>
