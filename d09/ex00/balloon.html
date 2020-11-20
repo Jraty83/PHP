@@ -19,6 +19,7 @@
 	var col = document.getElementById("balloon");
 	var colors = ["red", "green", "blue"];
 	var i = 0;
+	var clicked = false;
 	h = col.clientHeight;
 	w = col.clientWidth;
 
@@ -39,12 +40,14 @@
 	if (i == 3)
 		i = 0;
 	col.style.backgroundColor = colors[i];
+	clicked = true;
 //	console.log(col.clientHeight);						// print size
 	});
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 	col.addEventListener("mouseleave", function makeSmaller() {
+	if (!clicked) {
 	if (h > 200 && w > 200)
 	{
 	 	h -= 5;
@@ -55,7 +58,8 @@
 	i--;
 	if (i == -1)
 		i = 2;
-	col.style.backgroundColor = colors[i];
+	col.style.backgroundColor = colors[i];}
+	clicked = false;
 //	console.log(col.clientHeight);						// print size
 	});
 
