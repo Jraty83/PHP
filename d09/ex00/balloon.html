@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Javascript</title>
-	<!-- <link rel="stylesheet" href="stylesheet.css">		//	CSS gotta be inside .html file -->
-		<script>
-			
-		</script>
+		<meta charset="UTF-8">
+		<title>title</title>
+	<style>
+		#balloon {
+			height: 200px;
+			width: 200px;
+			background-color:red;
+			border-radius: 50%;
+		}
+	</style>
 	</head>
 	<body>
+		<div id="balloon"></div>
+	<script>
+	
+	var col = document.getElementById("balloon");
+	var colors = ["red", "green", "blue"];
+	var i = 0;
+	h = col.clientHeight;
+	w = col.clientWidth;
 
+	col.addEventListener("click", function makeBigger() {
+	if (h < 411 && w < 411)
+	{
+		h += 10;
+		w += 10;
+	}
+	else
+	{
+		h = 200;
+		w = 200;
+	}
+	col.style.height = h + 'px';
+	col.style.width = w + 'px';
+	i++;
+	if (i == 3)
+		i = 0;
+	col.style.backgroundColor = colors[i];
+//	console.log(col.clientHeight);						// print size
+	});
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+	col.addEventListener("mouseleave", function makeSmaller() {
+	if (h > 200 && w > 200)
+	{
+	 	h -= 5;
+	 	w -= 5;
+	}
+	col.style.height = h + 'px';
+	col.style.width = w + 'px';
+	i--;
+	if (i == -1)
+		i = 2;
+	col.style.backgroundColor = colors[i];
+//	console.log(col.clientHeight);						// print size
+	});
+
+	</script>
 	</body>
 </html>
