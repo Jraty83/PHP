@@ -24,25 +24,26 @@
 					let nr2 = parseInt(document.getElementById("right member").value);
 					let ope = document.getElementById("operator").value;
 					let result = 0;
+					let undefined = false;
 
 					if (nr1 >= 0 && nr2 >= 0)
 					{
-						if ((ope == '/' || ope == '%') && nr2 == 0)
+						if ((ope == '/' || ope == '%') && nr2 == 0) {
 							alert("It's over 9000!");
-						else
-						{
-							if (ope == "+")
-								result = nr1 + nr2;
-							if (ope == "-")
-								result = nr1 - nr2;
-							if (ope == "*")
-								result = nr1 * nr2;
-							if (ope == "/")
-								result = nr1 / nr2;
-							if (ope == "%")
-								result = nr1 % nr2;
-							alert(result);
+							undefined = true;
 						}
+						if (ope == "+")
+							result = nr1 + nr2;
+						if (ope == "-")
+							result = nr1 - nr2;
+						if (ope == "*")
+							result = nr1 * nr2;
+						if (ope == "/")
+							result = nr1 / nr2;
+						if (ope == "%")
+							result = nr1 % nr2;
+						if (!undefined)
+							alert(result);
 						console.log(result);
 					}
 					else
