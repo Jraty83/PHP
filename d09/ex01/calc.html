@@ -20,6 +20,12 @@
 				var calc = document.getElementById("submit");
 
 				calc.addEventListener('click', () => {
+					let rightover = document.getElementById("left member").value;
+					let leftover = document.getElementById("left member").value;
+					if (isNaN(rightover) === true || isNaN(leftover) === true) {
+						alert('Error :(');
+						return ;
+					}
 					let nr1 = parseInt(document.getElementById("left member").value);
 					let nr2 = parseInt(document.getElementById("right member").value);
 					let ope = document.getElementById("operator").value;
